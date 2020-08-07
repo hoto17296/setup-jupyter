@@ -1,0 +1,10 @@
+[Unit]
+Description=Jupyter Lab
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c '. /opt/conda/etc/profile.d/conda.sh && conda activate base && jupyter lab'
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
