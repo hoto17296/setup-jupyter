@@ -15,3 +15,10 @@ $ sudo reboot
 $ sudo apt install -y nvidia-driver-440
 $ conda install -y cudatoolkit cudnn
 ```
+
+## Setup Japanese Font
+``` console
+$ sudo apt install -y fonts-takao-gothic
+$ echo -e "\nfont.family: TakaoPGothic" >> $(python -c 'import matplotlib as m; print(m.matplotlib_fname())')
+$ rm -f ~/.cache/matplotlib/font*
+```
