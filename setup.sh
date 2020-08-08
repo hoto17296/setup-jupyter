@@ -16,6 +16,6 @@ echo "conda activate base" >> ${HOME}/.bashrc
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 mkdir ${HOME}/Notebooks
 mkdir ${HOME}/.jupyter
-cp ${SCRIPT_DIR}/jupyter_notebook_config.py ${HOME}/.jupyter
-sudo cp ${SCRIPT_DIR}/jupyter.service /etc/systemd/system
+sed -e "s|{{HOME}}|${HOME}|" ${SCRIPT_DIR}/jupyter_notebook_config.py > ${HOME}/.jupyter/jupyter_notebook_config.py
+sudo sed -e "s|{{USER}}|${USER}|" ${SCRIPT_DIR}/jupyter.service > /etc/systemd/system/jupyter.service
 sudo systemctl enable jupyter
