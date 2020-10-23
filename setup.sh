@@ -17,5 +17,5 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 mkdir ${HOME}/Notebooks
 mkdir ${HOME}/.jupyter
 sed -e "s|{{HOME}}|${HOME}|" ${SCRIPT_DIR}/jupyter_notebook_config.py > ${HOME}/.jupyter/jupyter_notebook_config.py
-sed -e "s|{{USER}}|${USER}|" ./jupyter.service | sudo tee /etc/systemd/system/jupyter.service > /dev/null
+sed -e "s|{{USER}}|${USER}|" ${SCRIPT_DIR}/jupyter.service | sudo tee /etc/systemd/system/jupyter.service > /dev/null
 sudo systemctl enable jupyter
