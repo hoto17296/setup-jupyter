@@ -1,4 +1,4 @@
-from os import getenv, getcwd
+from os import getcwd, getenv
 
 c = get_config()
 
