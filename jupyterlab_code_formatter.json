@@ -1,0 +1,14 @@
+{
+  "preferences": {
+    "default_formatter": {
+      "python": ["isort", "black"]
+    }
+  },
+  "black": {
+    "line_length": 120
+  },
+  "isort": {
+    "line_length": 120
+  },
+  "formatOnSave": true
+}
