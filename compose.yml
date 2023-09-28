@@ -1,0 +1,11 @@
+services:
+
+  jupyter:
+    build: .
+    environment:
+      JUPYTER_TOKEN: ""
+    ports:
+      - 8888:8888
+    volumes:
+      - ./work:/work
+    working_dir: /work
