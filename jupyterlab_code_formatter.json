@@ -10,5 +10,6 @@
   "isort": {
     "line_length": 120
   },
-  "formatOnSave": true
+  "formatOnSave": true,
+  "suppressFormatterErrorsIFFAutoFormatOnSave": true
 }
